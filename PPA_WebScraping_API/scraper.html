@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module scraper</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>scraper</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/rattigan/Documents/teaching/397A%202020%20fall/demos/demo_20200917/scraper.py">/Users/rattigan/Documents/teaching/397A 2020 fall/demos/demo_20200917/scraper.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="scraper.html#Scraper">Scraper</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="scraper.html#FileScraper">FileScraper</a>
+</font></dt><dt><font face="helvetica, arial"><a href="scraper.html#UrlScraper">UrlScraper</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FileScraper">class <strong>FileScraper</strong></a>(<a href="scraper.html#Scraper">Scraper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#FileScraper">FileScraper</a>(fname)<br>
+&nbsp;<br>
+<a href="#Scraper">Scraper</a>&nbsp;subclass&nbsp;for&nbsp;grabbing&nbsp;data&nbsp;from&nbsp;a&nbsp;file<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="scraper.html#FileScraper">FileScraper</a></dd>
+<dd><a href="scraper.html#Scraper">Scraper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FileScraper-__init__"><strong>__init__</strong></a>(self, fname)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="scraper.html#Scraper">Scraper</a>:<br>
+<dl><dt><a name="FileScraper-comes_before"><strong>comes_before</strong></a>(self, key, other)</dt><dd><tt>Searches&nbsp;from&nbsp;current&nbsp;cursor&nbsp;position&nbsp;to&nbsp;see&nbsp;whether&nbsp;key&nbsp;occurs&nbsp;before&nbsp;other</tt></dd></dl>
+
+<dl><dt><a name="FileScraper-comes_first"><strong>comes_first</strong></a>(self, choices)</dt><dd><tt>Searches&nbsp;from&nbsp;cursor&nbsp;and&nbsp;returns&nbsp;the&nbsp;first&nbsp;key&nbsp;from&nbsp;a&nbsp;group&nbsp;that&nbsp;appears</tt></dd></dl>
+
+<dl><dt><a name="FileScraper-move_back"><strong>move_back</strong></a>(self, key)</dt><dd><tt>Move&nbsp;the&nbsp;cursor&nbsp;to&nbsp;the&nbsp;right&nbsp;after&nbsp;the&nbsp;previous&nbsp;appearance&nbsp;of&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="FileScraper-move_to"><strong>move_to</strong></a>(self, key)</dt><dd><tt>Move&nbsp;the&nbsp;cursor&nbsp;to&nbsp;the&nbsp;right&nbsp;after&nbsp;the&nbsp;next&nbsp;appearance&nbsp;of&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="FileScraper-peek"><strong>peek</strong></a>(self, rng)</dt><dd><tt>Return&nbsp;a&nbsp;snippet&nbsp;of&nbsp;text&nbsp;without&nbsp;moving&nbsp;the&nbsp;cursor</tt></dd></dl>
+
+<dl><dt><a name="FileScraper-pull_from_to"><strong>pull_from_to</strong></a>(self, key_start, key_end)</dt><dd><tt>Return&nbsp;all&nbsp;text&nbsp;between&nbsp;two&nbsp;keys,&nbsp;then&nbsp;move&nbsp;cursor&nbsp;to&nbsp;after&nbsp;the&nbsp;second&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="FileScraper-pull_line"><strong>pull_line</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FileScraper-pull_until"><strong>pull_until</strong></a>(self, key)</dt><dd><tt>Return&nbsp;all&nbsp;text&nbsp;between&nbsp;current&nbsp;cursor&nbsp;position&nbsp;and&nbsp;key,&nbsp;then&nbsp;move&nbsp;cursor&nbsp;to&nbsp;after&nbsp;the&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="FileScraper-scout"><strong>scout</strong></a>(self, key)</dt><dd><tt>Look&nbsp;for&nbsp;a&nbsp;key,&nbsp;but&nbsp;don't&nbsp;move&nbsp;the&nbsp;cursor</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="scraper.html#Scraper">Scraper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Scraper">class <strong>Scraper</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Scraper">Scraper</a>(text)<br>
+&nbsp;<br>
+Class&nbsp;for&nbsp;extracting&nbsp;text&nbsp;from&nbsp;a&nbsp;scraped&nbsp;page.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;the&nbsp;text&nbsp;being&nbsp;examined<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pos:&nbsp;position&nbsp;of&nbsp;the&nbsp;current&nbsp;"cursor"&nbsp;within&nbsp;the&nbsp;text<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Scraper-__init__"><strong>__init__</strong></a>(self, text)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Scraper-comes_before"><strong>comes_before</strong></a>(self, key, other)</dt><dd><tt>Searches&nbsp;from&nbsp;current&nbsp;cursor&nbsp;position&nbsp;to&nbsp;see&nbsp;whether&nbsp;key&nbsp;occurs&nbsp;before&nbsp;other</tt></dd></dl>
+
+<dl><dt><a name="Scraper-comes_first"><strong>comes_first</strong></a>(self, choices)</dt><dd><tt>Searches&nbsp;from&nbsp;cursor&nbsp;and&nbsp;returns&nbsp;the&nbsp;first&nbsp;key&nbsp;from&nbsp;a&nbsp;group&nbsp;that&nbsp;appears</tt></dd></dl>
+
+<dl><dt><a name="Scraper-move_back"><strong>move_back</strong></a>(self, key)</dt><dd><tt>Move&nbsp;the&nbsp;cursor&nbsp;to&nbsp;the&nbsp;right&nbsp;after&nbsp;the&nbsp;previous&nbsp;appearance&nbsp;of&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Scraper-move_to"><strong>move_to</strong></a>(self, key)</dt><dd><tt>Move&nbsp;the&nbsp;cursor&nbsp;to&nbsp;the&nbsp;right&nbsp;after&nbsp;the&nbsp;next&nbsp;appearance&nbsp;of&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Scraper-peek"><strong>peek</strong></a>(self, rng)</dt><dd><tt>Return&nbsp;a&nbsp;snippet&nbsp;of&nbsp;text&nbsp;without&nbsp;moving&nbsp;the&nbsp;cursor</tt></dd></dl>
+
+<dl><dt><a name="Scraper-pull_from_to"><strong>pull_from_to</strong></a>(self, key_start, key_end)</dt><dd><tt>Return&nbsp;all&nbsp;text&nbsp;between&nbsp;two&nbsp;keys,&nbsp;then&nbsp;move&nbsp;cursor&nbsp;to&nbsp;after&nbsp;the&nbsp;second&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Scraper-pull_line"><strong>pull_line</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Scraper-pull_until"><strong>pull_until</strong></a>(self, key)</dt><dd><tt>Return&nbsp;all&nbsp;text&nbsp;between&nbsp;current&nbsp;cursor&nbsp;position&nbsp;and&nbsp;key,&nbsp;then&nbsp;move&nbsp;cursor&nbsp;to&nbsp;after&nbsp;the&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Scraper-scout"><strong>scout</strong></a>(self, key)</dt><dd><tt>Look&nbsp;for&nbsp;a&nbsp;key,&nbsp;but&nbsp;don't&nbsp;move&nbsp;the&nbsp;cursor</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UrlScraper">class <strong>UrlScraper</strong></a>(<a href="scraper.html#Scraper">Scraper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#UrlScraper">UrlScraper</a>(url)<br>
+&nbsp;<br>
+<a href="#Scraper">Scraper</a>&nbsp;subclass&nbsp;for&nbsp;grabbing&nbsp;data&nbsp;from&nbsp;a&nbsp;url<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="scraper.html#UrlScraper">UrlScraper</a></dd>
+<dd><a href="scraper.html#Scraper">Scraper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="UrlScraper-__init__"><strong>__init__</strong></a>(self, url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="scraper.html#Scraper">Scraper</a>:<br>
+<dl><dt><a name="UrlScraper-comes_before"><strong>comes_before</strong></a>(self, key, other)</dt><dd><tt>Searches&nbsp;from&nbsp;current&nbsp;cursor&nbsp;position&nbsp;to&nbsp;see&nbsp;whether&nbsp;key&nbsp;occurs&nbsp;before&nbsp;other</tt></dd></dl>
+
+<dl><dt><a name="UrlScraper-comes_first"><strong>comes_first</strong></a>(self, choices)</dt><dd><tt>Searches&nbsp;from&nbsp;cursor&nbsp;and&nbsp;returns&nbsp;the&nbsp;first&nbsp;key&nbsp;from&nbsp;a&nbsp;group&nbsp;that&nbsp;appears</tt></dd></dl>
+
+<dl><dt><a name="UrlScraper-move_back"><strong>move_back</strong></a>(self, key)</dt><dd><tt>Move&nbsp;the&nbsp;cursor&nbsp;to&nbsp;the&nbsp;right&nbsp;after&nbsp;the&nbsp;previous&nbsp;appearance&nbsp;of&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="UrlScraper-move_to"><strong>move_to</strong></a>(self, key)</dt><dd><tt>Move&nbsp;the&nbsp;cursor&nbsp;to&nbsp;the&nbsp;right&nbsp;after&nbsp;the&nbsp;next&nbsp;appearance&nbsp;of&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="UrlScraper-peek"><strong>peek</strong></a>(self, rng)</dt><dd><tt>Return&nbsp;a&nbsp;snippet&nbsp;of&nbsp;text&nbsp;without&nbsp;moving&nbsp;the&nbsp;cursor</tt></dd></dl>
+
+<dl><dt><a name="UrlScraper-pull_from_to"><strong>pull_from_to</strong></a>(self, key_start, key_end)</dt><dd><tt>Return&nbsp;all&nbsp;text&nbsp;between&nbsp;two&nbsp;keys,&nbsp;then&nbsp;move&nbsp;cursor&nbsp;to&nbsp;after&nbsp;the&nbsp;second&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="UrlScraper-pull_line"><strong>pull_line</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UrlScraper-pull_until"><strong>pull_until</strong></a>(self, key)</dt><dd><tt>Return&nbsp;all&nbsp;text&nbsp;between&nbsp;current&nbsp;cursor&nbsp;position&nbsp;and&nbsp;key,&nbsp;then&nbsp;move&nbsp;cursor&nbsp;to&nbsp;after&nbsp;the&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="UrlScraper-scout"><strong>scout</strong></a>(self, key)</dt><dd><tt>Look&nbsp;for&nbsp;a&nbsp;key,&nbsp;but&nbsp;don't&nbsp;move&nbsp;the&nbsp;cursor</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="scraper.html#Scraper">Scraper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
