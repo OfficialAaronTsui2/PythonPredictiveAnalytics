@@ -1,0 +1,14 @@
+cluster.py
+1. My data set is just mtcars from a previous assignment, but modified to only include the mpg and qsec columns.
+
+2. Clusters around the varying mpg of cars were created. Examples are one cluster was created for cars that have 21 MPG and another cluster was created for cars that have 10.4 MPG.
+
+3. The intuitive meaning of the clustering I've produced is clustering car models into different levels of (numerical) mpg.
+
+
+classify.py
+1. Create a linear regression of the data and predict the qsec from a certain mpg value.
+  
+2. It performs okay. It tells me that my data is not sufficient enough to produce a stronger relationship between the two variables, mpg and qsec.
+  
+3. I have tried increasing the fitting line for the regression model, which changed the regression line. This didn't change performance much due to my dataset still having a relatively low amount of data.
