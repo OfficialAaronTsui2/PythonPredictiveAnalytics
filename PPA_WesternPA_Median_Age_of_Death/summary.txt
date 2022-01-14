@@ -1,0 +1,24 @@
+# Western PA Median Age of Death
+# https://catalog.data.gov/dataset/allegheny-county-median-age-at-death
+
+# Summary of Dataset:
+
+# The types of all the variables are all floats.
+# Missing values were not recorded due to the low amount of data points (deaths) recorded.
+
+# Summary Statistics:
+# Black Deaths    Black MD AGE AT DEATH    WHITEdeaths     White MD AGE AT DEATH    TOTALdeaths*        TOTAL MD AGE AT DEATH
+# Median
+# 20.5              69.3                    72.5                78.1                    133.5                   76.5
+# mean
+# 47.02             64.01                   121.05              76.23                   171.21                  74.84
+# mode 
+# 3                 0                       4                   70                      52                      71.7
+# range
+# 287               83.2                    723                 88.4                    802                     85.9  
+
+Plots:
+#Histogram of Black Deaths
+#Histogram of White Deaths
+#Scatterplot of Black/White Median AaDs
+#Scatterplot of Black/White Median AaDs, colors swap if mvtWhite is bigger or equal to mvtBlack
